@@ -62,9 +62,7 @@ fn walk_tags(
         tag_paginators
             .firsts_of_tags
             .push(cur_tag_paginators[0].clone());
-        tag_paginators
-            .paginators
-            .extend(cur_tag_paginators.into_iter());
+        tag_paginators.paginators.extend(cur_tag_paginators);
     }
 
     tag_paginators.firsts_of_tags.sort_unstable_by_key(|p| {
